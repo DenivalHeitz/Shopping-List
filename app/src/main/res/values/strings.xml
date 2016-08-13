@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">ShopApp</string>
+    <string name="empty_text"></string>
+    <string name="scan">Scan</string>
+</resources>

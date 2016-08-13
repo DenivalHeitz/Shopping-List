@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.junin_000.shopapp.MainActivity"
+    android:background="#d0d5d6">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Item Name"
+        android:id="@+id/lblItemName"
+        android:layout_alignTop="@+id/textView"
+        android:layout_alignLeft="@+id/txtItemName"
+        android:layout_alignStart="@+id/txtItemName"
+        android:textStyle="bold" />
+
+    <EditText
+        android:layout_width="160dp"
+        android:layout_height="25dp"
+        android:id="@+id/txtItemName"
+        android:background="#ffffff"
+        android:layout_below="@+id/lblItemName"
+        android:layout_alignLeft="@+id/btnAddItem"
+        android:layout_alignStart="@+id/btnAddItem" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Priority"
+        android:id="@+id/textView"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/txtItemName"
+        android:layout_toEndOf="@+id/txtItemName"
+        android:layout_marginLeft="5dp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/txtPriority"
+        android:layout_below="@+id/textView"
+        android:layout_alignLeft="@+id/textView"
+        android:layout_alignStart="@+id/textView"
+        android:layout_alignBottom="@+id/txtItemName"
+        android:background="#ffffff" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Qty"
+        android:id="@+id/textView2"
+        android:layout_above="@+id/txtPriority"
+        android:layout_toRightOf="@+id/txtPriority"
+        android:layout_toEndOf="@+id/txtPriority"
+        android:layout_marginLeft="5dp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/txtQty"
+        android:layout_below="@+id/textView2"
+        android:layout_alignLeft="@+id/textView2"
+        android:layout_alignStart="@+id/textView2"
+        android:layout_marginLeft="5dp"
+        android:layout_alignBottom="@+id/txtPriority"
+        android:background="#ffffff" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Price"
+        android:id="@+id/textView3"
+        android:layout_below="@+id/txtItemName"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:layout_width="100dp"
+        android:layout_height="25dp"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/txtPrice"
+        android:background="#ffffff"
+        android:layout_below="@+id/textView3"
+        android:layout_alignLeft="@+id/btnAddItem"
+        android:layout_alignStart="@+id/btnAddItem" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Budget"
+        android:id="@+id/textView4"
+        android:layout_alignTop="@+id/textView3"
+        android:layout_alignLeft="@+id/txtPriority"
+        android:layout_alignStart="@+id/txtPriority"
+        android:textStyle="bold" />
+
+    <EditText
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/txtBudget"
+        android:layout_alignTop="@+id/txtPrice"
+        android:layout_alignLeft="@+id/textView4"
+        android:layout_alignStart="@+id/textView4"
+        android:layout_alignBottom="@+id/txtPrice"
+        android:background="#ffffff" />
+
+    <EditText
+        android:layout_width="330dp"
+        android:layout_height="250dp"
+        android:inputType="textMultiLine"
+        android:ems="10"
+        android:id="@+id/txtTextArea"
+        android:background="#ffffff"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="50dp"
+        android:nestedScrollingEnabled="true"
+        android:scrollIndicators="bottom|right"
+        android:textSize="15dp"
+        android:visibility="visible" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="Add Item"
+        android:id="@+id/btnAddItem"
+        android:layout_above="@+id/txtTextArea"
+        android:layout_alignLeft="@+id/txtTextArea"
+        android:layout_alignStart="@+id/txtTextArea"
+        android:background="#fb9191"
+        android:layout_marginBottom="10dp"
+        android:onClick="addItem"
+        android:nestedScrollingEnabled="true"
+        android:textStyle="bold" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="Shop"
+        android:id="@+id/btnShop"
+        android:background="#fb9191"
+        android:layout_alignTop="@+id/btnAddItem"
+        android:layout_alignRight="@+id/txtTextArea"
+        android:layout_alignEnd="@+id/txtTextArea"
+        android:textStyle="bold"
+        android:onClick="startShop" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        android:id="@+id/btnSave"
+        android:background="#fb9191"
+        android:textStyle="bold"
+        android:onClick="saveList"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/txtTextArea"
+        android:layout_alignEnd="@+id/txtTextArea" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtSaveList"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/txtPriority"
+        android:layout_alignEnd="@+id/txtPriority"
+        android:layout_alignLeft="@+id/txtTextArea"
+        android:layout_alignStart="@+id/txtTextArea"
+        android:background="#ffffff"
+        android:inputType="text"
+        android:layout_alignTop="@+id/btnSave"
+        android:layout_marginTop="5dp"
+        android:text="Save List" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Scan"
+        android:id="@+id/btnScan"
+        android:layout_alignTop="@+id/btnAddItem"
+        android:layout_centerHorizontal="true"
+        android:background="#fb9191"
+        android:onClick="scanBarCode"
+        android:nestedScrollingEnabled="false"
+        android:textStyle="bold" />
+
+</RelativeLayout>
